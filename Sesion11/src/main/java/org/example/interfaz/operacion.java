@@ -4,17 +4,15 @@ import java.util.ArrayList;
 
 public interface operacion {
 
-    public void create (Object object);
+    void create(Object object);
 
-    public ArrayList<Object> read();
+    ArrayList<Object> read();
 
-    public void Update (Object object);
+    void Update(Object object);
 
-    public void Delete (int id);
+    void Delete(int id);
 
-    public Object search (int id);
+    Object search(int id);
 
-    public Object search (String name);
-
-
+    Object search(String name);
 }

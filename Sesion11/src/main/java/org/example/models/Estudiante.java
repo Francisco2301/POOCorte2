@@ -9,18 +9,20 @@ public class Estudiante {
     private String email;
     private String telefono;
 
+    // Constructor vacío
     public Estudiante() {
-
     }
 
-    public Estudiante(String cif, String apellidos, String nombres, String email, String telefono) {
+    // Constructor con todos los campos
+    public Estudiante(String cif, String nombres, String apellidos, String email, String telefono) {
         this.cif = cif;
-        this.apellidos = apellidos;
         this.nombres = nombres;
+        this.apellidos = apellidos;
         this.email = email;
         this.telefono = telefono;
     }
 
+    // Getters y Setters
     public String getCif() {
         return cif;
     }
@@ -61,6 +63,7 @@ public class Estudiante {
         this.telefono = telefono;
     }
 
+    // toString para mostrar la información del estudiante
     @Override
     public String toString() {
         return "Estudiante{" +
@@ -71,6 +74,8 @@ public class Estudiante {
                 ", telefono='" + telefono + '\'' +
                 '}';
     }
+
+    // equals y hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,5 +88,4 @@ public class Estudiante {
     public int hashCode() {
         return Objects.hash(cif, nombres, apellidos, email, telefono);
     }
-
 }

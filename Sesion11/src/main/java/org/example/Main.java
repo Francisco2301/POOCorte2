@@ -1,14 +1,21 @@
 package org.example;
 
-import javax.swing.*;
+import org.example.dao.EstudianteDAO;
+import org.example.models.Estudiante;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello World");
+        EstudianteDAO estudianteDAO = new EstudianteDAO();
 
+        // Crear un estudiante
+        Estudiante estudiante = new Estudiante("23010117", "José Francisco", "López", "jlopezm@uamv.edu.ni", "12234-5678");
 
+        estudianteDAO.create(estudiante);
+
+        System.out.println("Listado de estudiantes:");
+        for (Object est : estudianteDAO.read()) {
+            System.out.println(est);
+        }
     }
 }
